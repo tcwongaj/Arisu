@@ -32,16 +32,17 @@ function replay()
   videoPlayer.play();
 }
 
-videojs("last_kiss_player").ready(function(){
-  this.on("ended", function(){
-    vm.pcount++;
-    videoPlayer.play();
-  });
-});
-
 var vm = new Vue({
     el: '#app',
     data: {
         pcount: 0
+    },
+    mounted: function(){
+      videojs("last_kiss_player").ready(function(){
+        this.on("ended", function(){
+          vm.pcount++;
+          videoPlayer.play();
+        });
+      });
     }
 });
