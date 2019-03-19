@@ -1,9 +1,5 @@
 
-var videoPlayer = videojs( "last_kiss_player" ,
-  {
-    loop: 'true',
-  }
-);
+var videoPlayer = videojs( "last_kiss_player");
 
 function play()
 {
@@ -41,6 +37,7 @@ var vm = new Vue({
       videojs("last_kiss_player").ready(function(){
         this.on("ended", function(){
           vm.pcount++;
+          videoPlayer.currentTime(0);
           videoPlayer.play();
         });
       });
