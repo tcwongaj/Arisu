@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Last Kiss Player</title>
+    <link href="video-js.min.css" rel="stylesheet">
+    <script src="video.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="video_control.js" defer></script>
+    <link href="index.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1 class="text-center">Last Kiss Player</h1>
+    <h3 class="text-center">鈴木みのり︰ここ数週間、毎日20回は絶対聴いています。本当に大好きです…</h3>
+    </br>
+    <div class="row">
+      <div class="col-sm-9 col-md-9 col-lg-9">
+        <video id="last_kiss_player" class="video-js vjs-big-play-centered" controls preload="auto" poster="poster.jpg" data-setup='{"fluid": true}'>
+          <source src="last_kiss.mp4" type="video/mp4">
+          <!--
+          <track kind="subtitles" src="last_kiss.vtt" srclang="jp" label="Japanese">
+          -->
+          <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3" id="app">
+        <h3>Counter and Controller</h3>
+        </br>
+        <button type="button" onclick="play()">Play</button>
+        <button type="button" onclick="pause()">Pause</button>
+        <button type="button" onclick="mute()">Mute</button>
+        <button type="button" onclick="replay()">Replay</button>
+        </br>
+        </br>
+        <h4>Played: {{ pcount }} times</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="force-to-bottom text-center">
+      <div class="col-xs-12">
+        <p>Last Kiss Player v.0.5.1  19/03/2019</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
