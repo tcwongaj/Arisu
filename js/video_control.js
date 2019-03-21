@@ -37,8 +37,9 @@ var vm = new Vue({
       videojs("last_kiss_player").ready(function(){
         this.on("ended", function(){
           vm.pcount++;
-          videoPlayer.currentTime(0);
-          videoPlayer.play();
+          if (vm.pcount != 20){
+            videoPlayer.play();
+          }
         });
       });
     }
