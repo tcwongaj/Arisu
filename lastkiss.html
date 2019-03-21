@@ -27,8 +27,8 @@
     </br>
     <div class="row">
       <div class="col-6 col-md-6 col-lg-9 col-xl-9">
-        <video id="last_kiss_player" class="video-js vjs-big-play-centered" controls preload="auto" poster="poster.jpg" data-setup='{"fluid": true}' playsinline>
-          <source src="last_kiss.mp4" type="video/mp4">
+        <video id="last_kiss_player" class="video-js vjs-big-play-centered" controls preload="auto" data-setup='{"fluid": true}' playsinline>
+          <!--<source src="last_kiss.mp4" type="video/mp4">-->
           <!--
           <track kind="subtitles" src="last_kiss.vtt" srclang="jp" label="Japanese">
           -->
@@ -36,15 +36,29 @@
         </video>
       </div>
       <div class="col-6 col-md-6 col-lg-3 col-xl-3" id="app">
-        <h3>Counter and Controller</h3>
+        <h3>Track to play:</h3>
+        <button type="button" onclick="track1Clicked()" :disabled="tr1Disable">6th LIVE</button>
+        <button type="button" onclick="track2Clicked()" :disabled="tr2Disable">SS3A Day1</button>
+        <button type="button" onclick="track3Clicked()" :disabled="tr3Disable">SS3A Day2</button>
         </br>
+        <h4>Now playing: {{ nowPlaying }}</h4>
+        <input type="checkbox" id="app" v-model="randomChecked">
+        <label for="checkbox">Random mode</label>
+
+        </br>
+        <h3>Controller:</h3>
         <button type="button" onclick="play()">Play</button>
         <button type="button" onclick="pause()">Pause</button>
         <button type="button" onclick="mute()">Mute</button>
-        <button type="button" onclick="replay()">Replay</button>
+        <!--<button type="button" onclick="replay()">Replay</button>-->
         </br>
         </br>
-        <h4>Played: {{ pcount }} times</h4>
+        <h3>Counter:</h3>
+        <h4>Total: {{ pcount }} times</h4>
+        <h4>6th LIVE: {{ tr1count }} times</h4>
+        <h4>SS3A Day1: {{ tr2count }} times</h4>
+        <h4>SS3A Day2: {{ tr3count }} times</h4>
+
       </div>
     </div>
   </div>
@@ -52,7 +66,7 @@
   <div class="container-fluid">
     <div class="force-to-bottom text-center">
       <div class="col-xs-12">
-        <p>Last Kiss Player v.0.5.1  19/03/2019</p>
+        <p>Last Kiss Player v.0.6.1  19/03/2019</p>
       </div>
     </div>
   </div>
