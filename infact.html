@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="description" content="in fact Player - arisutachibana.com">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>in fact Player</title>
+    <link href="css/video-js.min.css" rel="stylesheet">
+    <script src="js/video.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="js/infact.js" defer></script>
+    <link href="css/infact.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1 class="text-center">in fact Player</h1>
+    </br>
+    <div class="row">
+      <div class="col-6 col-md-6 col-lg-9 col-xl-9">
+        <video id="in_fact_player" class="video-js vjs-big-play-centered" controls preload="auto" data-setup='{"fluid": true}' playsinline>
+          <!--
+          <track kind="subtitles" src="last_kiss.vtt" srclang="jp" label="Japanese">
+          -->
+          <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3 col-xl-3" id="app">
+        <h3>Track to play:</h3>
+        <button type="button" onclick="track1Clicked()" :disabled="tr1Disable">3rd LIVE</button>
+        <button type="button" onclick="track2Clicked()" :disabled="tr2Disable">4th LIVE</button>
+        <button type="button" onclick="track3Clicked()" :disabled="tr3Disable">6th LIVE</button>
+        </br>
+        <h4>Now playing: {{ nowPlaying }}</h4>
+        <input type="checkbox" id="app" v-model="randomChecked">
+        <label for="checkbox">Random mode</label>
+
+        </br>
+        <h3>Controller:</h3>
+        <button type="button" onclick="play()">Play</button>
+        <button type="button" onclick="pause()">Pause</button>
+        <button type="button" onclick="mute()">Mute</button>
+        <button type="button" onclick="replay()">Replay</button>
+        </br>
+        </br>
+        <h3>Counter:</h3>
+        <h4>Total: {{ pcount }} times</h4>
+        <h4>3rd LIVE: {{ tr1count }} times</h4>
+        <h4>4th LIVE: {{ tr2count }} times</h4>
+        <h4>6th LIVE: {{ tr3count }} times</h4>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="force-to-bottom text-center">
+      <div class="col-xs-12">
+        <p>in fact Player v.0.5.1  25/03/2019</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
