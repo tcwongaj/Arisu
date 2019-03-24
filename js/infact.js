@@ -111,7 +111,7 @@ function track2Clicked(){
     type: "video/mp4",
     src: "in_fact_4th_s.mp4"
   })
-  videoPlayer.poster('poster.jpg');
+  //videoPlayer.poster('poster.jpg');
   videoPlayer.play();
 
 }
