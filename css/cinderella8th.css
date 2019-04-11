@@ -1,7 +1,21 @@
+html,
 body {
-  background: url('200206.png') no-repeat center center fixed;
+  height: 100%
+}
+
+body {
+  background: url('https://github.com/tcwongaj/Arisu/blob/master/200206.png?raw=true') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+
+#centertext{
+  color: #5386d9;
+  font-size: 5em;
+
+  text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF;
+
+  
 }
