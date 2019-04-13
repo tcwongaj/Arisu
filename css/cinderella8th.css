@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%
+  height: 100%;
 }
 
 body {
@@ -10,6 +10,14 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
+
+.navbar{
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
 
 #centertext{
   color: #5386d9;
