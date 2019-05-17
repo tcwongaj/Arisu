@@ -3,7 +3,11 @@ var videoPlayer = videojs( "okurimono_sunday_player",{
   sources: [{
     type: "video/youtube",
     src: "https://www.youtube.com/watch?v=cuFIWdvWqEY"
-    }]
+  }],
+  youtube: [{
+    showinfo: 0,
+    rel: 0
+  }]
 });
 
 
